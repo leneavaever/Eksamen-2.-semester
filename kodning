@@ -1,0 +1,199 @@
+/* Postnummer felt */
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const input = document.getElementById('postnummer-input');
+  const popup = document.getElementById('popup');
+  const lukBtn = document.getElementById('luk-popup');
+  const popupBy = document.getElementById('popup-by');
+  const popupMad = document.getElementById('popup-mad');
+  const popupBar = document.getElementById('popup-bar');
+  const popupAktiviteter = document.getElementById('popup-aktiviteter');
+
+  const data = {
+    "9000": {
+      by: "Aalborg",
+      mad: ["VISA Cafe - Brasserie (15% rabat for studerende)"],
+      bar: ["Basement Beer Bar (Happy hour fra 19:00-20:00)"],
+      aktiviteter: ["Aalborg Zoo (5% for studerende i weekender)"]
+    },
+    "8000": {
+      by: "Aarhus",
+      mad: ["Aarhus Street Food (10% rabat for studerende)"],
+      bar: ["Alberts (2 for 1 drinks fra 21:00 - 22:00)"],
+      aktiviteter: ["ARoS (10% rabat for studerende)"]
+    },
+    "5000": {
+      by: "Odense",
+      mad: ["Eydes (10% rabat på Forårs Menu)"],
+      bar: ["The Old Irish Pub (Happy hour fra 19:00-20:00)"],
+      aktiviteter: ["Locked Escape Room (10% for studerende)"]
+    }
+  };
+
+  input.addEventListener('keyup', function () {
+    const postnummer = input.value.trim();
+    if (postnummer.length === 4 && data[postnummer]) {
+      const info = data[postnummer];
+      popupBy.textContent = info.by;
+      popupMad.textContent = info.mad.join(", ");
+      popupBar.textContent = info.bar.join(", ");
+      popupAktiviteter.textContent = info.aktiviteter.join(", ");
+      popup.style.display = 'flex';
+    }
+  });
+
+  lukBtn.addEventListener('click', function () {
+    popup.style.display = 'none';
+  });
+
+  popup.addEventListener('click', function (event) {
+    if (event.target === popup) {
+      popup.style.display = 'none';
+    }
+  });
+});
+</script>
+
+/*styling til egen javascript*/
+#postnummer-container {
+  text-align: center;
+  z-index: 2;
+}
+
+#postnummer-input {
+  font-size: 24px;
+  padding: 10px 15px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 2;
+}
+
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.popup-content {
+  background-color: #5f7357;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  color: white;
+  position: relative;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-content h2 {
+  margin-top: 0;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.popup-content h2,
+.popup-content h3 {
+  color: #FCFAF3;
+}
+
+.luk-knap {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/*for låst menu*/
+.main-header-bar {
+  position: fixed;
+	left: 0;
+	right: 0;
+	width; 100%:
+  z-index: 999;
+}
+
+/*for låst menu responsiv*/
+#masthead {
+  position: fixed;
+	left: 0;
+	right: 0;
+	width; 100%:
+  z-index: 999;
+}
+
+/* Gør header synlig på mobile enheder */
+@media (max-width: 768px) {
+    .ast-site-identity {
+        display: block !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .ast-header-break-point .main-header-bar {
+        position: relative !important;
+        top: 0 !important;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .ast-header-break-point .main-header-bar {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+    }
+
+    .ast-header-break-point .menu-toggle {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .ast-header-break-point .main-header-bar-navigation {
+        display: block !important;
+    }
+}
+/* Skjul det fulde søgefelt på mobilskærme */
+@media (max-width: 768px) {
+    .is-search-form {
+        display: none !important;
+    }
+
+    .search-icon {
+        display: inline-block !important;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const icon = document.querySelector(".search-icon");
+  const form = document.querySelector(".is-search-form");
+
+  if (icon && form) {
+    icon.addEventListener("click", function () {
+      form.style.display = "block";
+    });
+  }
+});
