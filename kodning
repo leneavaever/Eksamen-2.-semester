@@ -188,14 +188,4 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 }
 
-/* dette gør at søgefeltet virker */
-document.addEventListener("DOMContentLoaded", function () {
-  const icon = document.querySelector(".search-icon");
-  const form = document.querySelector(".is-search-form");
-
-  if (icon && form) {
-    icon.addEventListener("click", function () {
-      form.style.display = "block";
-    });
-  }
 });
