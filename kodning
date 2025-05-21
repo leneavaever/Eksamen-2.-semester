@@ -1,4 +1,4 @@
-/* Postnummer felt */
+/* Postnummer felt JAVASCRIPT */
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
-/*styling til egen javascript*/
+/*styling til postnummer*/
 #postnummer-container {
   text-align: center;
   z-index: 2;
@@ -111,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
   color: #FCFAF3;
 }
 
+/* krydset */
 .luk-knap {
   position: absolute;
   top: 5px;
@@ -152,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 @media (max-width: 768px) {
     .ast-header-break-point .main-header-bar {
-        position: relative !important;
+        position: relative !important; /*important bliver brugt så det overrider andre koder som wordpress skulle have */
         top: 0 !important;
     }
 }
@@ -187,6 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 }
 
+/* dette gør at søgefeltet virker */
 document.addEventListener("DOMContentLoaded", function () {
   const icon = document.querySelector(".search-icon");
   const form = document.querySelector(".is-search-form");
