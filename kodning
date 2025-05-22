@@ -126,24 +126,6 @@ document.addEventListener('DOMContentLoaded', function () {
   to { opacity: 1; transform: scale(1); }
 }
 
-/*for låst menu*/
-.main-header-bar {
-  position: fixed;
-	left: 0;
-	right: 0;
-	width; 100%:
-  z-index: 999;
-}
-
-/*for låst menu responsiv*/
-#masthead {
-  position: fixed;
-	left: 0;
-	right: 0;
-	width; 100%:
-  z-index: 999;
-}
-
 /* Gør header synlig på mobile enheder */
 @media (max-width: 768px) {
     .ast-site-identity {
@@ -151,14 +133,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 }
 
-/* navigationsbaren på telefoner */
 @media (max-width: 768px) {
     .ast-header-break-point .main-header-bar {
-        position: relative !important; /*important bliver brugt så det overrider andre koder som wordpress skulle have */
+        position: relative !important;
         top: 0 !important;
     }
 }
-
 
 @media (max-width: 768px) {
     .ast-header-break-point .main-header-bar {
@@ -178,15 +158,3 @@ document.addEventListener('DOMContentLoaded', function () {
         display: block !important;
     }
 }
-/* Skjul det fulde søgefelt på mobilskærme */
-@media (max-width: 768px) {
-    .is-search-form {
-        display: none !important;
-    }
-
-    .search-icon {
-        display: inline-block !important;
-    }
-}
-
-});
