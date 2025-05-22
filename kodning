@@ -151,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 }
 
+/* navigationsbaren på telefoner */
 @media (max-width: 768px) {
     .ast-header-break-point .main-header-bar {
         position: relative !important; /*important bliver brugt så det overrider andre koder som wordpress skulle have */
