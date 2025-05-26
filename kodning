@@ -169,3 +169,105 @@ document.addEventListener('DOMContentLoaded', function () {
         opacity: 1 !important;
         position: relative !important;
     }
+
+
+/*forminator egen css*/ 
+
+.forminator-ui.forminator-custom-form {
+    background-image: url('https://su-tips.amandahegner.dk/wp-content/uploads/2025/05/blank-white-notepaper-design_53876-118304.avif') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    padding: 30px !important;
+    border-radius: 15px !important;
+}
+
+.forminator-description {
+color: black; }
+
+forminator-field {
+    padding-left:80%;
+}
+
+/*knappens position på siden*/ 
+.forminator-button-submit {
+  margin-left: 12%;
+}
+
+
+.forminator-textarea { 
+    margin-left:12% !important;
+      width:88%;
+}
+/*rød tekst skulle rykkes lidt, fejlbeskeden i input*/
+.forminator-error-message {
+  display: block !important;
+  padding-left: 12% !important;
+  color: red !important; /* Valgfrit for synlighed */
+}
+
+/* rykker navn og email felt ind */
+.forminator-input {
+  margin-left: 12% !important;
+  width: 88%;
+}
+
+/* selvskrevet kode slutter her. forminoater er 180 tallet så det blev sort  */
+.forminator-textarea {
+    background-color: #ffffff !important; /* gør baggrunden hvid */
+      color: #2E5E30 !important; /* mørkegrøn */
+}
+
+/* label-tekster (Navn, E-mail, Besked) */
+.forminator-label,
+#name-1 .forminator-label,
+#email-1 .forminator-label,
+#textarea-1 .forminator-label {
+ 
+ font-family: 'Bitter', serif !important;
+ font-weight: bold !important;
+ color: #63785E !important;
+ padding-left: 13%;
+}
+
+/* placeholder-tekst (grå farve) */
+.forminator-input::placeholder,
+.forminator-textarea::placeholder {
+    color: #888888 !important;
+    font-family: 'Bitter', serif !important;
+    font-weight: normal !important;
+    padding-top:2%;
+}
+
+/* tekst brugeren selv skriver */
+.forminator-input,
+.forminator-textarea {
+    color: #000000 !important;
+    font-family: 'Bitter', serif !important;
+    font-weight: normal !important;
+}
+
+/* send-knap */
+.forminator-button-submit {
+    background-color: #63785E !important;
+    color: #FFFFFF !important;
+    border-radius: 10px !important;
+    font-family: 'Bitter', serif !important;
+    font-weight: bold !important;
+}
+
+
+/* sikrer hele formen bruger Bitter-font */
+.forminator-custom-form {
+    font-family: 'Bitter', serif !important;
+}
+
+
+@media only screen and (max-width: 600px) {
+  /* Knappen rykkes til midten og får 100% bredde på mobil */
+  .forminator-button-submit {
+    margin-left: 12% !important; /* Fjern evt. margin */
+    width: 70% !important;    /* Knappen fylder hele bredden */
+    box-sizing: border-box;    /* Sørger for padding ikke skubber ud */
+  }
+}
