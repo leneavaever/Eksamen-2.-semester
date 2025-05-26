@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
   z-index: 999;
 }
 
-/*for låst menu responsiv*/
+/*for låst menu telefon*/
 #masthead {
   position: fixed;
 	left: 0;
@@ -145,8 +145,6 @@ document.addEventListener('DOMContentLoaded', function () {
   to { opacity: 1; transform: scale(1); }
 }
 
-
-
 /* Gør header synlig på mobile enheder */
 @media (max-width: 768px) {
     .ast-site-identity {
@@ -154,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 }
 
-/*Den gør så hele menubaren er synlig på telefonen eftrersom vi havde et bug med kun tre af emnerne kom frem i menubaren*/
+/*Den gør så hele menubaren er synlig på telefonen eftersom vi havde et bug med kun tre af emnerne kom frem i menubaren*/
 @media (max-width: 768px) {
     .ast-header-break-point .main-header-bar {
         position: relative !important;
@@ -169,7 +167,26 @@ document.addEventListener('DOMContentLoaded', function () {
         opacity: 1 !important;
         position: relative !important;
     }
+  }
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .ast-header-break-point .main-header-bar {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        top: 0 !important;
+    }
+	.menu-toggle.main-header-menu-toggle.ast-mobile-menu-trigger-minimal {
+  margin-left: 90% !important;
+}}
+
+/*ipad air*/
+@media only screen and (min-width: 820px) and (max-width: 1180px) {
+  .menu-toggle.main-header-menu-toggle.ast-mobile-menu-trigger-minimal {
+    margin-left: 250% !important;
+  }
+}
 
 /*forminator egen css*/ 
 
