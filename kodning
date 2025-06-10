@@ -1,4 +1,21 @@
 /* Postnummer felt JAVASCRIPT */
+/*HTML*/
+<div id="postnummer-container">
+  <input type="text" id="postnummer-input" placeholder="Indtast postnummer" />
+</div>
+
+<div id="popup">
+  <div class="popup-content">
+    <span id="luk-popup" class="luk-knap">&times;</span>
+    <h2 id="popup-by"></h2>
+    <h3>Mad</h3>
+    <p id="popup-mad"></p>
+    <h3>Bar</h3>
+    <p id="popup-bar"></p>
+    <h3>Aktiviteter</h3>
+    <p id="popup-aktiviteter"></p>
+  </div>
+</div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
